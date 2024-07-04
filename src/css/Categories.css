@@ -1,0 +1,85 @@
+
+.Categoriesmain{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+height: fit-content;
+gap: 5px;
+padding: 7px;
+}
+
+
+.cat1layer,.cat2layer,.cat3layer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.cat1layer:hover,.cat2layer:hover,.cat3layer:hover{
+background-color:rgb(17, 17, 17,0.3);
+}
+.Cat1{
+width:54vw;
+background:url(../../public/Images/footwears.jpg)no-repeat;
+background-size: cover;
+background-position:15%;
+}
+.Cat2{
+    width:43vw;
+    background:url(../../public/Images/watches.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    .Cat3{
+        width:70vw;
+        background:url(../../public/Images/cloths.jpg)no-repeat;
+        background-size: cover;
+
+        }
+
+.cat1wrapper,.cat2wrapper,.cat3wrapper{
+    display: flex;
+background-color:whitesmoke;
+align-items: center;
+width: 140px;
+position: relative;
+top: 90px;
+border: 0.2px solid black;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+transition: all ease-in-out 0.3s;
+}
+.cat1wrapper:hover,.cat2wrapper:hover,.cat3wrapper:hover{
+   background-color: rgb(31, 30, 30);
+   color: white;
+   border: 0.2px solid purple;
+   transition: all ease-in-out 0.3s;
+}
+
+.cat1wrapper,.cat2wrapper,.cat3wrapper, h1{
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 3px;
+}
+
+.cat3layer:hover>.cat3wrapper,.cat2layer:hover>.cat2wrapper,
+.cat1layer:hover>.cat1wrapper{
+
+top: 50px;
+transition: all ease-in-out 0.3s;
+
+}
+
+@media screen and (max-width:650px){
+    .Cat1,.Cat2,.Cat3{width: 90vw;}
+
+    .Cat3{background-position: center;}
+    .Categoriesmain{
+align-items: center;
+justify-content: center;
+    }
+    
+}

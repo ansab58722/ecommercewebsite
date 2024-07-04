@@ -1,0 +1,253 @@
+/* Google Fonts Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.producttitle{
+  margin-top:14px;
+  font-size: 45px;
+  font-weight: 600;
+  color: purple;
+  text-align: center;
+}
+.selectbox {
+	cursor: pointer;
+	outline:0;
+	color: #333333;
+	font-size: 14px;
+	padding: 8px 10px;
+	min-width: 150px;
+	border-radius: 3px;
+	border: 1px solid #d6d6d6;
+	background-color: #ffffff;
+  margin: 20px 20px;
+}
+.selectbox:hover, .selectbox:focus {
+	background-color: #ffffff;
+	color: #000000;
+	border: 1px solid #969696;
+}
+.product-card2 {
+  border: 1px radial-gradient(#553c9a, #ee4b2b);
+  position: relative;
+  max-width: 355px;
+  width: 100%;
+  height: 756px;
+  border-radius: 5px;
+  padding: 20px 30px 30px 30px;
+  background: #f8f8f8;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  overflow: hidden;
+}
+.product-card2 .logo-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-card2 .logo-cart img{
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+.product-card2 .logo-cart i{
+  font-size: 27px;
+  color: #707070;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.product-card2 .logo-cart i:hover{
+  color: #553c9a;
+}
+.product-card2 .main-images{
+  position: relative;
+  height: 210px;
+}
+.product-card2 .main-images img{
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  object-fit: contain;
+  transform: rotate(0deg);
+  left: -25px;
+  top: -14px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.main-images:hover{
+  scale: 1.2;
+}
+.product-card2 .main-images img.active{
+  opacity: 1;
+}
+.shoe-details{
+  margin-top: 130px;
+}
+.product-card2 .shoe-details .shoe_name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #161616;
+ 
+}
+.product-card2 .shoe-details p{
+  font-size: 15px;
+  font-weight: 400;
+  color: #2c0c77;
+
+  text-align: center;
+
+}
+.product-card2 .shoe-details .stars i{
+  margin: 0 -1px;
+  color: #553c9a;
+}
+.product-card2 .color-price .color-option{
+  display: flex;
+  align-items: center;
+}
+.color-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.color-price .color-option .color{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+}
+.color-option  .circles{
+  display: flex;
+}
+.color-option  .circles .circle{
+  height: 40px;
+  width: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.color-option  .circles .circle.vactive{
+  background-color: #161616;
+  box-shadow: 0 0 0 2px #fff,
+               0 0 0 4px #0071C7;
+}
+.color-option  .circles .circle.pink{
+  background: #FA1795;
+}
+.color-option  .circles .circle.pink.vactive{
+  box-shadow: 0 0 0 2px #fff,
+               0 0 0 4px #FA1795;
+}
+.color-option  .circles .circle.yellow{
+  background: #F5DA00;
+}
+.color-option  .circles .circle.yellow.vactive{
+  box-shadow: 0 0 0 2px #fff,
+               0 0 0 4px #F5DA00;
+}
+.color-price .price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.color-price .price .price_num{
+  font-size: 25px;
+  font-weight: 600;
+  color: #707070;
+}
+.color-price .price .price_letter{
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: -4px;
+  color: #707070;
+}
+.product-card2 .button{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  border-radius: 25px;
+  margin-top:30px;
+  overflow: hidden;
+}
+.product-card2 .button .button-layer{
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  background-image: linear-gradient(135deg,#9708CC, #43CBFF,#9708CC, #43CBFF );
+  transition: all 0.4s ease;
+  border-radius: 25PX;
+}
+.product-card2 .button:hover .button-layer{
+  left: 0;
+}
+.product-card2 .button button{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.btntest{
+    height: 100px;
+    width: 100px;
+    background-color: #0071C7;
+}
+.bactive{
+
+  background:color "whitesmoke";
+  border: 2px solid #3672a8;
+}
+
+.swiper {
+  height: 100%;
+    width: 96%;
+    overflow: visible;
+
+  }
+  
+  .swiperSlide {
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  margin-left: 10%;
+
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 644px) {
+    .product-card {
+      left: 10vw;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .product-card {
+      left: 10vw;
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    .product-card {
+      left: 2%;
+    }
+  }
+  
