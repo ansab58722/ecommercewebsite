@@ -15,7 +15,7 @@ export const Availablecolors = ({url,color}) => {
         parent.querySelector(".mainimage").src = e.target.src;
       };
 
-if(url!=undefined){
+if(url!==undefined){
 
     return(
 

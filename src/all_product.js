@@ -1,6 +1,6 @@
 import p1_img from "./Images/product_1.png"
 import pi1_img from "./Images/p1_product_i1.png"
-import pi2_img from "./Images/p1_product_i2.png"
+
 import pi3_img from "./Images/p1_product_i3.png"
 import p2_img from "./Images/product_2.png";
 import p3_img from "./Images/product_3.png";

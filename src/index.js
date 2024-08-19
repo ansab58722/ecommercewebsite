@@ -7,12 +7,9 @@ import { Store } from './app/Store';
 import { Provider } from 'react-redux';
 import Landingpage from './Screens/Landingpage';
 
-import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import Shoppingcart from './Components/Shoppingcart';
 import Producdetail from './Components/Productdetail'
