@@ -1,7 +1,8 @@
 
 import { useDispatch, useSelector } from "react-redux"
 import  "../css/Shoppingcart.css"
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+//import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
 import { incrementdecrement,removefromcart } from "../features/CartSlice"
 const Shoppingcart = () => {
     
@@ -65,8 +66,13 @@ dispatch(removefromcart(item))
 
         }}>&#10005;</span></div>
     </div>
-    <h6>size={item.selectedsize}</h6>
-    <h6>color={item.selectedcolor}</h6>
+<div className="colorsize">
+<h6>size={item.selectedsize}</h6>
+<h6>color={item.selectedcolor}</h6>
+
+</div>
+   
+
 </div>
     
 )

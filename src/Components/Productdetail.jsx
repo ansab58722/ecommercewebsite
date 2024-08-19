@@ -5,6 +5,7 @@ import  "../css/Productdetail.css"
 import Shoppingcart from"../Components/Shoppingcart"
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart} from "../features/CartSlice";
+import Navbardesktop from './Navbar-desktop';
 
 const Productdetail = () => {
   
@@ -20,6 +21,7 @@ const dispatch=useDispatch()
     
 
 <div className="mainproductdetail">
+<Navbardesktop/>
 <div className="mainproductdetailwrapper">
 
 <div className="productimag">

@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "../css/cloths.css";
 import "swiper/css/pagination";
+import Availablecolors from '../Components/Availablecolors'
 // import required modules
 import { Pagination } from "swiper/modules";
 import { useDispatch, useSelector } from "react-redux";
 import {addTocart,colorandsize } from "../features/CartSlice";
+import { Route } from 'react-router-dom';
 
 
 const Cloths = () => {
@@ -20,18 +22,10 @@ const Cloths = () => {
 
     const[filtereditems,setfilteritems]=useState(0)
 
-    const addremoveclass = (e) => {
-        document.querySelector(".colour").attributes.value.value=e.target.attributes.value.value
-        let active = document.querySelectorAll(".vactive");
-        for (let index = 0; index < active.length; index++) {
-          active[index].classList.remove("vactive");
-        }
-        e.target.classList.add("vactive");
-        var parent =
-          e.target.parentElement.parentElement.parentElement.parentElement
-            .parentElement;
-        parent.querySelector(".mainimage").src = e.target.src;
-      };
+    
+
+
+
       const filteritems=(value,filter)=>{
         const updateitems=Product.filter((item)=>{
 
@@ -121,14 +115,20 @@ const Cloths = () => {
       if (Product !== undefined) {
         return (
           <SwiperSlide key={Product.id}>
-            <div className="product-card2">
+            <div className="product-card">
               
               <div className="main-images">
+
+
+
                 <img
+ 
+
+
                   id="blue"
-                  className="mainimage active"
+                  className=" mainimage clothimg active"
                   src={Product.imageURL}
-                  alt="blue"
+                  alt="Image Not Available"
                 />
               </div>
               <div className="shoe-details">
@@ -147,34 +147,17 @@ const Cloths = () => {
               <div className="color-price">
                 <div className="color-option">
                   <span className="color">Images:</span>
-                  <div className="circles colour" value="Pink" >
-                    <span id="blue">
-                      <img
-                        className="circle  "
-                        src={Product.imageURL}
-                        alt="Nil"
-                        value="Blue"
-                        onClick={(e) => addremoveclass(e)}
-                      />{" "}
-                    </span>
-                    <span id="pink">
-                      <img
-                        className="circle  vactive"
-                        src={Product.imageURL2}
-                        value="Pink"
-                        alt="NIL"
-                        onClick={(e) => addremoveclass(e)}
-                      />
-                    </span>
-                    <span id="yellow">
-                      <img
-                        className="circle  "
-                        src={Product.imageURL3}
-                        alt="NIL"
-                        value="Yellow"
-                        onClick={(e) => addremoveclass(e)}
-                      />
-                    </span>
+                  <div className="circles colour" value="Pink" style={{padding:"2%"}}>
+                  <Availablecolors  url={Product.imageURL} color="pink"  />
+                    
+                    <Availablecolors  url={Product.imageURL2} color="blue"  />
+                   
+
+
+
+
+                   
+                    <Availablecolors  url={Product.imageURL3} color="green" />
                   </div>
                 </div>
                 
@@ -193,11 +176,11 @@ const Cloths = () => {
                 <div className="color-option">
                   <span className="color"style={{paddingLeft:"10px"}}>Size:</span>
 
-                  <div className="circles size" value="">
+                  <div className="circles size" value="" style={{marginLeft:"9%",padding:"2%"}}>
                   <span id="yellow" >
                       <label
-                      style={{backgroundColor:"white"}}
-                        className="circle   "
+                      style={{backgroundColor:"white", }}
+                        className="circle bactive "
                         alt=""
                         value="6"
                         onClick={(i) =>{ 
@@ -223,7 +206,7 @@ document.querySelector(".size").attributes.value.value=i.target.attributes.value
                         alt=""
                         value="9"
                         onClick={(i) =>{ 
-                        const als=  document.querySelectorAll(".bactive")//
+                        const als= document.querySelectorAll(".bactive")//
 
                           als.forEach((e)=>{e.classList.remove("bactive") })
 
@@ -267,15 +250,49 @@ document.querySelector(".size").attributes.value.value=i.target.attributes.value
              
 
               <div className="button">
-                <div className="button-layer"></div>
+                
                 <button onClick={() => {
 
               dcolorandsize.size=document.querySelector(".size").attributes.value.value;
               dcolorandsize.color=document.querySelector(".colour").attributes.value.value;
-                 
-                  dispatch(colorandsize(dcolorandsize))
+              const selectedproduct = {
+                id:
+                  Product.id +
+                  dcolorandsize.color +
+                  dcolorandsize.size,
+                name: Product.name,
 
-                  dispatch(addTocart(Product))
+                brand: Product.brand,
+
+                category: Product.category,
+
+                color: "",
+                gender: Product.gender,
+
+                imageURL: Product.imageURL,
+                imageURL2: Product.imageURL2,
+                is_in_inventory: Product.is_in_inventory,
+
+                items_left: Product.items_left,
+
+                maincategory: Product.maincategory,
+
+                new_price: Product.new_price,
+
+                old_price: Product.old_price,
+
+                quantity: Product.quantity,
+                size: Product.size,
+                selectedcolor: dcolorandsize.color,
+                selectedsize: dcolorandsize.size,
+              };
+
+
+
+
+      
+
+                  dispatch(addTocart(selectedproduct))
 
                 }}>
                   Add To Cart
