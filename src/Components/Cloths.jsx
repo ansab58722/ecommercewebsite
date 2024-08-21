@@ -94,9 +94,9 @@ const Cloths = () => {
     slidesPerView={"auto"}
     spaceBetween={30}
     breakpoints={{
-      645: {
+      600: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: "0",
       },
       750: {
         slidesPerView: "2",
@@ -114,7 +114,7 @@ const Cloths = () => {
     {allitems.map((Product) => {
       if (Product !== undefined) {
         return (
-          <SwiperSlide key={Product.id}>
+          <SwiperSlide key={Product.id} className='swiper-Slide '>
             <div className="product-card">
               
               <div className="main-images">

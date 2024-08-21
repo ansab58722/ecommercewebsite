@@ -87,7 +87,7 @@ const Productcards = ({ Product }) => {
         slidesPerView={"auto"}
         spaceBetween={30}
         breakpoints={{
-          645: {
+          500: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -107,7 +107,7 @@ const Productcards = ({ Product }) => {
         {allitems.map((Product) => {
           if (Product !== undefined) {
             return (
-              <SwiperSlide key={Product.id}>
+              <SwiperSlide className="swiper-Slide " key={Product.id}>
                 <div className="product-card">
                   <div className="logo-cart">
                     <img src="images/nlogo.jpg" alt="logo" />
