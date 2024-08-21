@@ -94,9 +94,9 @@ const Cloths = () => {
     slidesPerView={"auto"}
     spaceBetween={30}
     breakpoints={{
-      600: {
+      650: {
         slidesPerView: 2,
-        spaceBetween: "0",
+        spaceBetween: "3",
       },
       750: {
         slidesPerView: "2",

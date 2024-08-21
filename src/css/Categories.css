@@ -4,6 +4,7 @@ display: flex;
 flex-wrap: wrap;
 width: 100%;
 height: fit-content;
+justify-content: center;
 gap: 5px;
 padding: 7px;
 }
@@ -69,12 +70,22 @@ transition: all ease-in-out 0.3s;
 .cat1layer:hover>.cat1wrapper{
 
 top: 50px;
-transition: all ease-in-out 0.3s;
+transition: all ease-in-out 0.6s;
 
 }
 
 @media screen and (max-width:650px){
-    .Cat1,.Cat2,.Cat3{width: 90vw;}
+    .Cat1,.Cat2,.Cat3{width: 90vw;
+        height: 350px;
+    
+    
+    
+    }
+    .cat1layer,.cat2layer,.cat3layer{
+        
+        height: 350px;
+    }
+    
 
     .Cat3{background-position: center;}
     .Categoriesmain{

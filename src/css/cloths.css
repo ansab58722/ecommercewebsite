@@ -40,8 +40,8 @@
   width: 360px;
   padding: 1%;
   gap: 20px;
-  height: max-content;
-  max-height: 740px;
+  height: fit-content;
+  min-height: 450px;
   border-radius: 5px;
   background: rgb(245, 245, 245);
   box-shadow: 0 5px 10px rgb(131, 2, 131,0.4);
@@ -111,6 +111,7 @@ margin-top: -8%;
 }
 .shoe-details{
 display: grid;
+padding-top: 1px;
 padding-left: 10px;
 padding-right: 10px;
 align-items: center;
@@ -252,9 +253,11 @@ border-radius: 25px;
 
 
 .swiper {
-  height: 100%;
+  
     width: 95vw;
-    overflow: hidden;
+  height: fit-content;
+  min-height:max-content;
+  max-height: 750px;
   }
   
   .swiper-Slide {
@@ -262,6 +265,7 @@ border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     /* Center slide text vertically */
 
   }
