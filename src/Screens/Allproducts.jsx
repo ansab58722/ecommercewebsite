@@ -45,12 +45,12 @@ const Allproducts = () => {
     if (e === "high-to-low") {
       if (filteredcategoryitems === 0) {
         let tempdata = [...datawithoutkey];
-        const sorteditems = tempdata.sort((a, b) => a.new_price < b.new_price);
+        const sorteditems = tempdata.sort((a, b) => b.new_price - a.new_price);
 
         setallitems(sorteditems);
       } else {
         let tempdata = [...filteredcategoryitems];
-        const sorteditems = tempdata.sort((a, b) => a.new_price < b.new_price);
+        const sorteditems = tempdata.sort((a, b) => b.new_price - a.new_price);
         setallitems(sorteditems);
       }
     }
@@ -59,12 +59,12 @@ const Allproducts = () => {
     
         if (filteredcategoryitems === 0) {
           let tempdata = [...datawithoutkey];
-          const sorteditems = tempdata.sort((a, b) => a.new_price > b.new_price);
+          const sorteditems = tempdata.sort((a, b) => a.new_price - b.new_price);
     
           setallitems(sorteditems);
         } else {
           let tempdata = [...filteredcategoryitems];
-          const sorteditems = tempdata.sort((a, b) => a.new_price > b.new_price);
+          const sorteditems = tempdata.sort((a, b) => a.new_price - b.new_price);
           setallitems(sorteditems);
         }
       }
